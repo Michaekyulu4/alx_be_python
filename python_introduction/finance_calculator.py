@@ -1,5 +1,5 @@
-monthly_income = int(input("Enter your total monthly income")) #Prompting the user to feed their monthly income.
-monthly_expenses = int(input ("Enter your total monthly expenses"))#Prompting the user to feed the monthly expenses
+monthly_income = int(input("Enter your monthly income: ")) #Prompting the user to feed their monthly income.
+monthly_expenses = int(input ("Enter your total monthly expenses: "))#Prompting the user to feed the monthly expenses
 
 monthly_savings = monthly_income - monthly_expenses #calculating the monthly savings through subtraction
 
