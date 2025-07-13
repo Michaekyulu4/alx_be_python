@@ -1,8 +1,8 @@
-P = 1000
-R = 0.05
-T = 3  #Defining variables
+principal = 1000
+rate = 0.05
+time = 3  #Defining variables
 
-I = P * R * T #Multiplication to find the Interest
+interest = principal * rate * time #Multiplication to find the Interest
 
-print("The simple interest is:", I) #print function to output the results
+print("The simple interest is:", interest) #print function to output the results
 
