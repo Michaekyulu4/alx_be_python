@@ -11,6 +11,11 @@ def main():
         display_menu()
         choice = input("Enter your choice: ")
 
+        if not choice.isdigit():
+            print("Invalid input. Please enter a number(1-4)")
+            continue
+        choice = int(choice)
+        
         if choice == '1':
             #Prompt for and add an item
             item = input(f"Add an item: ")
