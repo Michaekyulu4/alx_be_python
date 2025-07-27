@@ -16,13 +16,13 @@ def main():
             continue
         choice = int(choice)
         
-        if choice == '1':
+        if choice == 1:
             #Prompt for and add an item
-            item = input(f"Add an item: ")
+            item = input ("Enter the item to add:")
             shopping_list.append(item)
             print(item, "added to shopping list")
             
-        elif choice == '2':
+        elif choice == 2:
             #Prompt for and remove an item
             item = input(f"Remove an item: ")
             if item in shopping_list:
@@ -32,7 +32,7 @@ def main():
                 print(item, "is not in your shopping list")
             
             
-        elif choice == '3':
+        elif choice == 3:
 
             if not shopping_list:
                 print("Your shopping list is empty")
@@ -42,7 +42,7 @@ def main():
                 for i, item in enumerate(shopping_list, start=1):
                     print(f"{i}. {item}")
                       
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
