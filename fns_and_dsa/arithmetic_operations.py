@@ -1,22 +1,22 @@
-def perform_operation(num1, num2):
+def perform_operation(num1, num2, operation):
 
     num1 = float(num1)
     num2 = float(num2)
-    add = num1 + num2
-    subtract = num1 - num2
-    multiply = num1 * num2
 
-    if num2 == 0:
-        divide = "Error cannot divide by zero"
+    if operation == "add":
+        return num1 + num2
+
+    elif operation == "subtract":
+        return num1 - num2
+    
+    elif operation == "mutliply":
+        return num1 * num2
+
+    elif operation == "divide":
+        if num2 == 0:
+            divide = "Error: Cannot divide by zero"
+        else:
+            divide = num1 / num2
 
     else:
-        divide = num1 / num2
-
-    operation = {
-        "add": add,
-        "subtract": subtract,
-        "multiply": multiply,
-        "divide": divide
-        }
-
-    return operation
+        return "Error: Invalid operation"
