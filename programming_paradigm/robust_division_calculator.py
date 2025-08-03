@@ -7,7 +7,7 @@ def safe_divide(numerator, denominator):
             result = num/denom
             return f"The result of {numerator} divided by {denominator} is: {result:.2f}"
         except ZeroDivisionError:
-            return "Error: Cannot divide by zero"
+            return "Error: Cannot divide by zero."
 
     except ValueError:
         return "Error: The 2 values must be numbers"
