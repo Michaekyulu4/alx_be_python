@@ -2,7 +2,7 @@ def safe_divide(numerator, denominator):
     try:
 
         num = float(numerator)
-        deno = float(denominator)
+        denom = float(denominator)
         try:
             result = num/denom
             return f"The result of the division is {result}"
