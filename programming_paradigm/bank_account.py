@@ -5,17 +5,21 @@ class BankAccount():
 
 
     def deposit(self, amount):
-        if amount ==0:
-            self.acount_balance += amount
+        if amount > 0:
+            self.account_balance += amount
             return True
         return False
     def withdraw(self, amount):
         if amount <= self.account_balance:
-            sel.account_balance -= amount
+            self.account_balance -= amount
             return True
         return False
     def display_balance(self):
         print(f"Current balance: ${self.account_balance:.2f}")
+
+
+
+        
 
 import sys
 from bank_account import BankAccount
