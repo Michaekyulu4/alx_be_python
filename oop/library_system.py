@@ -5,7 +5,7 @@ class Book:
         self.year = year
 
     def  __str__(self):
-        return f"{self.title} by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
     
 class EBook(Book):
@@ -14,7 +14,7 @@ class EBook(Book):
         self.file_size_mb = file_size
 
     def __str__(self):
-        return f"{super().__str__()} - EBook [{self.file_size_mb}MB]"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
     
 class PrintBook(Book):
     """Derived class for printed books."""
@@ -23,7 +23,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{super().__str__()} - PrintBook [{self.page_count} pages]"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
     
 class Library:
