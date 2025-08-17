@@ -33,10 +33,6 @@ class Library:
     def list_books(self):
         for book in self.books:  # Just print each book
             print(book)
-        else:
-            print("Books in the library:")
-            for book in self.books:
-                print(f" - {book}")
 
     
 
