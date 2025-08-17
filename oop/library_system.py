@@ -4,20 +4,18 @@ class Book:
         self.author = author
         self.year = year
 
-    def  __str__(self):
+    def __str__(self):
         return f"Book: {self.title} by {self.author}"
 
-    
 class EBook(Book):
     def __init__(self, title, author, year, file_size):
-        super().__init__(title,author, year)
-        self.file_size_mb = file_size
+        super().__init__(title, author, year)
+        self.file_size = file_size  # in KB
 
     def __str__(self):
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
-    
+
 class PrintBook(Book):
-    """Derived class for printed books."""
     def __init__(self, title, author, year, page_count):
         super().__init__(title, author, year)
         self.page_count = page_count
@@ -25,21 +23,16 @@ class PrintBook(Book):
     def __str__(self):
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
-    
 class Library:
-    """Library class managing a collection of books."""
     def __init__(self):
-        self.books = []  # Composition: Library has books
+        self.books = []
 
     def add_book(self, book):
-        """Add a book (Book, EBook, or PrintBook) to the library."""
-        self.books.append(book)
-        print(f"Added: {book}")
+        self.books.append(book)  # No print here
 
     def list_books(self):
-        """List all books in the library."""
-        if not self.books:
-            print("The library has no books.")
+        for book in self.books:  # Just print each book
+            print(book)
         else:
             print("Books in the library:")
             for book in self.books:
