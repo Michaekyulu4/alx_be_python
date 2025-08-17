@@ -18,9 +18,9 @@ class EBook(Book):
     
 class PrintBook(Book):
     """Derived class for printed books."""
-    def __init__(self, title, author, year, pages):
+    def __init__(self, title, author, year, page_count):
         super().__init__(title, author, year)
-        self.pages = pages
+        self.page_count = page_count
 
     def __str__(self):
         return f"{super().__str__()} - PrintBook [{self.pages} pages]"
